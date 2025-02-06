@@ -1,0 +1,320 @@
+
+h3, p {
+    margin: 0;
+}
+
+
+div.main_outer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 50px 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    
+    // outline: 3px solid red;
+
+    div.box_left {
+        width: 31%;
+        background: #FFF;
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;  
+        
+        div.self_image {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;   
+
+            position: relative;
+            
+            p {
+                position: absolute;
+                left: 17px;
+                bottom: 27px; 
+                
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 0px; /* 0% */                
+            }
+        }
+
+        div.box_left_body {
+            padding: 0px 15px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;  
+            
+            div.contacts {
+                padding: 20px 0px;
+                border-bottom: 1px solid rgba(163, 163, 163, 0.40);                
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 17px;
+                align-self: stretch;    
+                
+                div.contact_bar {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;
+                    align-self: stretch;      
+                    
+                    .ic1 {
+                        width: 22px;
+                        height: 20px;    
+                        color: #009688;                                            
+                    }
+
+                    .ic2 {
+                        width: 22px;
+                        height: 20px;    
+                        color: #009688;                                            
+                    }
+
+                    .ic3 {
+                        width: 24px;
+                        height: 17px;  
+                        color: #009688;                                            
+                    }
+
+                    .ic4 {
+                        width: 22px;
+                        height: 20px;
+                        color: #009688;                                            
+                    }
+
+                    p {
+                        color: rgba(0, 0, 0, 0.60);
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;                        
+                    }
+                }
+            }
+
+            div.skills {
+                padding: 15px 0px 30px 0px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 17px;
+                align-self: stretch;    
+                
+                div.heading {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;    
+                    
+                    .ic {
+                        width: 18px;
+                        height: 18px; 
+                        color: #009688;                                               
+                    }
+
+                    h3 {
+                        color: rgba(0, 0, 0, 0.60);
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;                        
+                    }
+                }
+            }
+
+            div.languages {
+                padding: 15px 0px 30px 0px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 17px;
+                align-self: stretch;   
+                
+                div.heading {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;
+                    
+                    .ic {
+                        width: 18px;
+                        height: 18px;  
+                        color: #009688;                                              
+                    }
+
+                    h3 {
+                        color: rgba(0, 0, 0, 0.60);
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;                        
+                    }
+                }
+            }
+        }
+    }
+
+    div.box_right {
+        width: 64%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;   
+        
+        div.box_right_pad {
+            padding: 15px;
+            background: #FFF;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);            
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            align-self: stretch;   
+            
+            div.heading {
+                display: flex;
+                align-items: flex-end;
+                gap: 20px;
+                
+                .ic {
+                    width: 25px;
+                    height: 25px;  
+                    color: #009688;                  
+                }
+
+                h3 {
+                    color: rgba(0, 0, 0, 0.60);
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;                    
+                }
+            }
+        }
+    }
+}
+
+
+
+.scaled_image_container {
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 67%;   // modify here
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+
+@mixin screen320 {
+    div.main_outer {
+        padding: 0 15px;
+
+        flex-direction: column;
+        align-items: center;  
+        
+        div.box_left {
+            width: 100%;
+
+            div.self_image {
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        div.box_right {
+            width: 100%;
+        }
+    }
+}
+
+
+@mixin screen600 {
+    @include screen320;
+
+    div.main_outer {
+        div.box_left {
+            div.self_image {
+                p {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Extra small devices (phones, below 600px) */
+@media only screen and (min-width: 320px) and (max-width: 599.9px) {
+    @include screen320;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767.9px) {
+    @include screen600;
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.9px) {
+
+} 
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199.9px) {
+
+} 
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1535.9px) {
+
+} 
+
+
+
+
+
+
+

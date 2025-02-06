@@ -1,0 +1,58 @@
+h3, p {
+  margin: 0;
+}
+
+div.main_panel {
+  padding: 20px 15px;
+  border-bottom: 0.7px solid rgba(163, 163, 163, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+div.main_panel h3 {
+  align-self: stretch;
+  color: rgba(0, 0, 0, 0.65);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+div.main_panel div.panel_time {
+  display: flex;
+  align-items: center;
+}
+div.main_panel div.panel_time .ic {
+  width: 14px;
+  height: 16px;
+  color: #009688;
+  padding-right: 15px;
+}
+div.main_panel div.panel_time p {
+  color: #009688;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+div.main_panel div.panel_time p span {
+  color: #FFF;
+  vertical-align: middle;
+  padding: 1.5px 5px;
+  border-radius: 2px;
+  background: #009688;
+}
+div.main_panel p {
+  align-self: stretch;
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=panel.module.css.map */
